@@ -37,6 +37,6 @@ SELECT Name, Price FROM all_sales WHERE Price > (SELECT AVG(Price) FROM all_sale
 SELECT CustomerID,SUM(Price) FROM all_sales GROUP BY CustomerID ORDER BY SUM(Price)DESC LIMIT 1;
 -- Problem 9
 -- Find the total number of sales for each sales person
-
+SELECT SUM(Quantity), Firstname, MiddleInitial, Lastname FROM all_sales GROUP BY Firstname, MiddleInitial, Lastname;
 -- Problem 10
 -- Find the sales person who sold the most to the customer you found in Problem 8
