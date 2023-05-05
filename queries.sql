@@ -28,7 +28,7 @@ SELECT SUM(Price), Firstname, MiddleInitial, Lastname FROM all_sales GROUP BY Fi
 SELECT MAX(Price),Name FROM all_sales GROUP BY Name ORDER BY MAX(Price) DESC LIMIT 1;
 -- Problem 6
 -- Find the product that was sold the most times
-SELECT MAX(Quantity),Name FROM all_sales GROUP BY Name ORDER BY MAX(Quantity) DESC LIMIT 1;
+SELECT Min(Quantity),Name FROM all_sales GROUP BY Name ORDER BY Min(Quantity) ASC LIMIT 1;
 -- Problem 7
 -- Using a subquery, find all products that have a price higher than the average price for all products
 SELECT Name, Price FROM all_sales WHERE Price > (SELECT AVG(Price) FROM all_sales) ORDER BY Price DESC;
