@@ -3,14 +3,17 @@
 -- SELECT * FROM sales;
 -- SELECT * FROM products;
 -- SELECT * FROM employees;
-SELECT * FROM sales LEFT JOIN products ON sales.ProductID = products.ProductID RIGHT JOIN employees ON sales.SalesPersonID = employees.EmployeeID;
+SELECT * FROM sales INNER JOIN products ON sales.ProductID = products.ProductID INNER JOIN employees ON sales.SalesPersonID = employees.EmployeeID;
  
 -- 2a. Create a View for the query you made in Problem 1 named "all_sales"
 -- NOTE: You'll want to remove any duplicate columns to clean up your view!
+-- CREATE VIEW all_sales AS SELECT SalesID, CustomerID, Quantity, Name , Price, FirstName,MiddleInitial, LastName FROM sales INNER JOIN products ON sales.ProductID = products.ProductID INNER JOIN employees ON sales.SalesPersonID = employees.EmployeeID;
+
 
 
 
 -- 2b. Test your View by selecting all rows and columns from the View
+SELECT * FROM all_sales;
 
 -- Problem 3
 -- Find the average sale amount for each sales person
