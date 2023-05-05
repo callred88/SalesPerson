@@ -31,7 +31,7 @@ SELECT MAX(Price),Name FROM all_sales GROUP BY Name ORDER BY MAX(Price) DESC LIM
 SELECT MAX(Quantity),Name FROM all_sales GROUP BY Name ORDER BY MAX(Quantity) DESC LIMIT 1;
 -- Problem 7
 -- Using a subquery, find all products that have a price higher than the average price for all products
-
+SELECT Name, Price FROM all_sales WHERE Price > (SELECT AVG(Price) FROM all_sales) ORDER BY Price DESC;
 -- Problem 8
 -- Find the customer who spent the most money in purchased products
 
