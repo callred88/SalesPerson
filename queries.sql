@@ -34,7 +34,7 @@ SELECT MAX(Quantity),Name FROM all_sales GROUP BY Name ORDER BY MAX(Quantity) DE
 SELECT Name, Price FROM all_sales WHERE Price > (SELECT AVG(Price) FROM all_sales) ORDER BY Price DESC;
 -- Problem 8
 -- Find the customer who spent the most money in purchased products
-
+SELECT CustomerID,SUM(Price) FROM all_sales GROUP BY CustomerID ORDER BY SUM(Price)DESC LIMIT 1;
 -- Problem 9
 -- Find the total number of sales for each sales person
 
