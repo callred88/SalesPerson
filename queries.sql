@@ -25,7 +25,7 @@ SELECT SUM(Price), Firstname, MiddleInitial, Lastname FROM all_sales GROUP BY Fi
 
 -- Problem 5
 -- Find the product that has the highest price
-
+SELECT MAX(Price),Name FROM all_sales GROUP BY Name ORDER BY MAX(Price) DESC LIMIT 1;
 -- Problem 6
 -- Find the product that was sold the most times
 
