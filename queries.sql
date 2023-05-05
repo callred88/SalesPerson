@@ -17,6 +17,7 @@ SELECT * FROM all_sales;
 
 -- Problem 3
 -- Find the average sale amount for each sales person
+SELECT AVG(Price), Firstname, MiddleInitial, Lastname FROM all_sales GROUP BY Firstname, MiddleInitial, Lastname
 
 -- Problem 4
 -- Find the top three sales persons by total sales
