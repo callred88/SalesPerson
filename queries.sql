@@ -40,3 +40,4 @@ SELECT CustomerID,SUM(Price) FROM all_sales GROUP BY CustomerID ORDER BY SUM(Pri
 SELECT SUM(Quantity), Firstname, MiddleInitial, Lastname FROM all_sales GROUP BY Firstname, MiddleInitial, Lastname;
 -- Problem 10
 -- Find the sales person who sold the most to the customer you found in Problem 8
+SELECT Firstname, MiddleInitial, Lastname,CustomerID,SUM(Price) FROM all_sales GROUP BY Firstname, MiddleInitial, Lastname,CustomerID ORDER BY SUM(Price)DESC LIMIT 1;
